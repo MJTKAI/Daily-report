@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteDatabase.CursorFactory
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
+import androidx.fragment.app.Fragment
 
 class DBUser : SQLiteOpenHelper {
     constructor(context: Context?, name: String?, factory: CursorFactory?, version: Int) : super(
@@ -16,7 +17,9 @@ class DBUser : SQLiteOpenHelper {
         version
     ) {
     }
+    /**
 
+     */
     private var dp: SQLiteDatabase? = null
 
     constructor(context: Context?) : super(context, "User.db", null, 1) {
